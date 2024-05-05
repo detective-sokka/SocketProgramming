@@ -1,5 +1,5 @@
 cc_library(
     name = "posix",
-    hdrs = glob(["inlcude/posix/*.h"]),
+    hdrs = glob(["*.h"]),
     visibility = ["//visibility:public"]
 )

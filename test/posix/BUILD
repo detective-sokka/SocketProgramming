@@ -5,7 +5,8 @@ cc_test(
     deps = [
         "@com_google_googletest//:gtest",
         "@com_google_googletest//:gtest_main",
-        "//include/posix:posix"
+        "//include/posix:posix",
+        "//src/posix:posix"
     ],
     visibility = ["//visibility:public"]
 )
