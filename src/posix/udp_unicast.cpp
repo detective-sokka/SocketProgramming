@@ -25,6 +25,16 @@ udp_unicast::udp_unicast(std::string udp_ip, unsigned short udp_port)
     if (udp_port < 1)
     {
         throw std::runtime_error{"Invalid UDP Port"};
-    }    
+    }
+}
+
+std::string udp_unicast::get_udp_ip()
+{
+    return m_udp_ip;
+}
+
+unsigned short udp_unicast::get_udp_port()
+{
+    return m_udp_port;
 }
 }

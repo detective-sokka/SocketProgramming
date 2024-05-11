@@ -45,5 +45,11 @@ TEST(udp_unicast_create_invalid_ip_port_throws_exception, BasicAssertions)
 
 TEST(udp_unicast_create_valid_ip_port_throws_nothing, BasicAssertions)
 {
-    EXPECT_NO_THROW(posix::udp_unicast("196.168.1.0", 22));
+    std::string ip = "196.168.1.0";
+    unsigned int port = 21;
+    EXPECT_NO_THROW(posix::udp_unicast(ip, port));
+    posix::udp_unicast udp_unicast_object = posix::udp_unicast(ip, port);
+
+    EXPECT_EQ(udp_unicast_object.get_udp_ip(), ip);
+    EXPECT_EQ(udp_unicast_object.get_udp_port(), port);
 }
