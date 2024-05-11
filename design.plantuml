@@ -1,0 +1,20 @@
+@startuml
+
+interface socket
+class udp_socket
+class tcp_socket
+interface socket_factory
+class tcp_socket_factory
+class udp_socket_factory
+class udp_packet
+class tcp_packet
+
+socket <|.. udp_socket
+socket <|.. tcp_socket
+
+socket_factory <|.. tcp_socket_factory
+socket_factory <|.. udp_socket_factory
+
+
+
+@enduml
