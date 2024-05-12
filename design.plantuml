@@ -15,4 +15,9 @@ socket <|.. tcp_socket
 socket_factory <|.. tcp_socket_factory
 socket_factory <|.. udp_socket_factory
 
+socket_factory --> socket
+
+udp_socket "1" - "1" udp_packet
+tcp_socket "1" - "1" tcp_packet
+
 @enduml
